@@ -1,0 +1,136 @@
+@forward 'globals';
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+}
+body{
+    text-align: center;
+    background-color: var(--LightGray);
+}
+.grid{
+    display: grid;
+    grid-template-rows: 267px 228px 227px;
+    width: 313px;
+    margin: 72px auto;
+    box-shadow: 0 20px 25px hsl(218, 22%, 67%,25%);
+    justify-content: center;
+
+    &__main{
+       background-color: white;
+       text-align: left;
+       padding: 25px;
+       border-top-left-radius: 5px;
+       border-top-right-radius: 5px;
+ 
+       h3{
+        color: var(--Cyan);
+        margin-bottom: 30px;
+       }
+       h4{
+        color: var(--BrightYellow);
+        margin-bottom: 25px;
+       }
+       p{
+        color: var(--GrayishBlue);
+        font-size: 13px;
+        line-height: 25px;
+       }
+      
+    }
+    &__signup{
+        background-color: var(--Cyan);
+        color: white;
+        text-align: left;
+        padding: 25px;
+
+        h4{
+            margin-bottom: 20px;
+        }
+      
+        .price-container{
+            display: flex;
+            align-items: center;
+        }
+        .price{
+            font-size: 30px;
+            font-weight: 700;
+            margin-right: 12px;
+        }
+        .due{
+            color: hsl(204, 43%, 87%);
+            font-size: 14px;
+            margin-top: 0;
+        }
+
+        p{
+            margin-top: 10px;
+            
+        }
+        button{
+            background-color: var(--BrightYellow);
+            color: white;
+            font-weight: 700;
+            border: none;
+            width: 263px;
+            height: 48px;
+            border-radius: 5px;
+            margin: 30px auto auto auto;
+            box-shadow: 0px 5px 10px hsl(0, 0, 0,15%);
+        }
+    }
+    &__info{
+        background-color: #4ABEBD;
+        text-align: left;
+        padding: 25px;
+        color: white;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        h4{
+            margin-bottom: 20px;
+        }
+        p{
+            font-size: 14px;
+            line-height: 20px;
+            color: hsl(204, 43%, 92%);
+        }
+    }
+    @media (min-width:700px){
+        margin: 163px auto;
+        grid-template-columns: 318px 318px;
+        grid-template-rows: auto;
+        width: 625px;
+
+        box-shadow: 0px 15px 35px hsl(218, 22%, 67%,35%);
+ 
+        &__main{
+         grid-column: 1/span 2;
+         padding: 40px;
+        }
+ 
+        &__signup{
+         border-bottom-left-radius: 7px;
+         padding: 40px;
+         button{
+            width: 237px;
+            height: 48px;
+         }
+        }
+ 
+        &__info{
+         border-bottom-left-radius: 0;
+         border-bottom-right-radius: 7px;
+         padding: 40px;
+         p{
+            font-size: 13px;
+         }
+        }
+    }
+}
+footer{
+    a{
+        color: var(--Cyan);
+    }
+}

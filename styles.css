@@ -1,0 +1,152 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a, a:visited, a:active {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+body {
+  text-align: center;
+  background-color: var(--LightGray);
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: 267px 228px 227px;
+  width: 313px;
+  margin: 72px auto;
+  box-shadow: 0 20px 25px hsla(218deg, 22%, 67%, 0.25);
+  justify-content: center;
+}
+.grid__main {
+  background-color: white;
+  text-align: left;
+  padding: 25px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.grid__main h3 {
+  color: var(--Cyan);
+  margin-bottom: 30px;
+}
+.grid__main h4 {
+  color: var(--BrightYellow);
+  margin-bottom: 25px;
+}
+.grid__main p {
+  color: var(--GrayishBlue);
+  font-size: 13px;
+  line-height: 25px;
+}
+.grid__signup {
+  background-color: var(--Cyan);
+  color: white;
+  text-align: left;
+  padding: 25px;
+}
+.grid__signup h4 {
+  margin-bottom: 20px;
+}
+.grid__signup .price-container {
+  display: flex;
+  align-items: center;
+}
+.grid__signup .price {
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 12px;
+}
+.grid__signup .due {
+  color: hsl(204deg, 43%, 87%);
+  font-size: 14px;
+  margin-top: 0;
+}
+.grid__signup p {
+  margin-top: 10px;
+}
+.grid__signup button {
+  background-color: var(--BrightYellow);
+  color: white;
+  font-weight: 700;
+  border: none;
+  width: 263px;
+  height: 48px;
+  border-radius: 5px;
+  margin: 30px auto auto auto;
+  box-shadow: 0px 5px 10px hsla(0deg, 0%, 0%, 0.15);
+}
+.grid__info {
+  background-color: #4ABEBD;
+  text-align: left;
+  padding: 25px;
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.grid__info h4 {
+  margin-bottom: 20px;
+}
+.grid__info p {
+  font-size: 14px;
+  line-height: 20px;
+  color: hsl(204deg, 43%, 92%);
+}
+@media (min-width: 700px) {
+  .grid {
+    margin: 163px auto;
+    grid-template-columns: 318px 318px;
+    grid-template-rows: auto;
+    width: 625px;
+    box-shadow: 0px 15px 35px hsla(218deg, 22%, 67%, 0.35);
+  }
+  .grid__main {
+    grid-column: 1/span 2;
+    padding: 40px;
+  }
+  .grid__signup {
+    border-bottom-left-radius: 7px;
+    padding: 40px;
+  }
+  .grid__signup button {
+    width: 237px;
+    height: 48px;
+  }
+  .grid__info {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 7px;
+    padding: 40px;
+  }
+  .grid__info p {
+    font-size: 13px;
+  }
+}
+
+footer a {
+  color: var(--Cyan);
+}/*# sourceMappingURL=styles.css.map */
